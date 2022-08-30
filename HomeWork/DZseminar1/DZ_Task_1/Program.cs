@@ -16,7 +16,6 @@ int Promt(string message)
     throw new Exception("Данное число невозможно перевести в целое число");
 }
 
-int max;
 int firstNumber = Promt("Введите первое целое число -> ");
 int secondNumber = Promt("Введите второе целое число -> ");
 

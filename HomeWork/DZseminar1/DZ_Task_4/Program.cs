@@ -14,17 +14,7 @@ int Promt(string message)
     }
     throw new Exception("Данное число невозможно перевести в целое число");
 }
-bool EvenNumber(int inNumber)
-{
-    if (inNumber % 2 == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+
 
 
 int Number = Promt("Введите правую границу диапазона [1..N], целое число N -> ");
@@ -41,12 +31,9 @@ else
     }
     else
     {
-        for (int i = 1; i <= Number; i++)
+        for (int i = 2; i <= Number; i += 2)
         {
-            if (EvenNumber(i))
-            {
-                System.Console.Write($"{i}  ");
-            }
+            System.Console.Write($"{i}  ");
         }
     }
 
