@@ -21,18 +21,9 @@ int firstNumber = Promt("Введите первое целое число -> ")
 int secondNumber = Promt("Введите второе целое число -> ");
 int thirdNumber = Promt("Введите третье целое число -> ");
 
-if (firstNumber > secondNumber)
-{
-    max = firstNumber;
-}
-else
-{
-    max = secondNumber;
-}
-if (thirdNumber > max)
-{
-    max = thirdNumber;
-}
+max = firstNumber;
+if (secondNumber> max) max = secondNumber;
+if (thirdNumber > max) max = thirdNumber;
 
 System.Console.WriteLine($"Максимальное из трех чисел {firstNumber}, {secondNumber}, {thirdNumber} равно {max}");
 
