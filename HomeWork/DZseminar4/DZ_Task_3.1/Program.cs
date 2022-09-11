@@ -1,14 +1,8 @@
-﻿//Задача 3: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+﻿//Задача 3.1: Напишите программу, которая задаёт массив из 8 элементов (случайным образом) и выводит их на экран.
 //1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 //6, 1, 33 -> [6, 1, 33]
 
 const int N = 8;
-
-int Promt(string message)
-{
-    System.Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
 
 
 void FillArray(int[] inArray)
@@ -16,8 +10,7 @@ void FillArray(int[] inArray)
     int length = inArray.Length;
     for (int i = 0; i < length; i++)
     {
-        inArray[i] = Promt($"Введите {i + 1} число -> ");
-        // inArray[i] = new Random().Next(1, 11); //случайное число от 1 до 10
+      inArray[i] = new Random().Next(1, 101); //случайное число от 1 до 100
     }
     System.Console.WriteLine(); //отделим пустой строкой
 }

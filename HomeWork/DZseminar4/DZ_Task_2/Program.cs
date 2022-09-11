@@ -1,7 +1,5 @@
-﻿//Задача 2: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
-//456 -> 3
-//78 -> 2
-//89126 -> 5
+﻿//Задача 2: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
 
 
 
@@ -13,27 +11,24 @@ ulong Promt(string message)
 }
 
 
-int CountDigits(ulong number)
+ulong SumDigits(ulong number)
 {
-    int count = 0;
-    if (number != 0)
-    {
-        while (number >0)
-        {
-            number /= 10;
-            count++;
-        }
-        return count;
-    }
-    else
-    {
-        return 1;
-    }
+    ulong digit;
+    ulong sum = 0;
 
+    while (number > 0)
+    {
+        digit = number % 10;
+        sum += digit;
+        number /= 10;
+    }
+    return sum;
 }
+
+
 
 
 
 //Основная программа
 ulong num = Promt("Введите число -> ");
-System.Console.Write($"Количество цифр в числе {num} - > {CountDigits(num)}");
+System.Console.Write($"Сумма цифр в числе {num} - > {SumDigits(num)}");

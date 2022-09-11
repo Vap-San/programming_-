@@ -1,31 +1,31 @@
-﻿//Задача 1: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
-//7 -> 28
-//4 -> 10
-//8 -> 36
+﻿//Задача 1: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
 
 
 
 //int Promt(string message) ввод целого числа
-ulong Promt(string message)
+int Promt(string message)
 {
     System.Console.Write(message);
-    return Convert.ToUInt64(Console.ReadLine());
+    return Convert.ToInt32(Console.ReadLine());
 }
 
 
-ulong SumNumbers(ulong number)
+ulong DegreeNumbers(int basis, int index)
 {
-    ulong sum = 0;
-    for (ulong i = 1; i <= number; i++)
+    ulong degree = 1;
+    ulong outBasis = Convert.ToUInt64(basis);
+    for (int i = 1; i <= index; i++)
     {
-        sum += i;
+        degree *= outBasis;
     }
-    return sum;
+    return degree;
 }
 
 
 
 //Основная программа
-ulong num = Promt("Введите число -> ");
-System.Console.Write($"Сумма числе от 1 до {num} - > {SumNumbers(num)}");
+int basisA = Promt("Введите основание степени -> ");
+int indexA = Promt("Введите показатель степени -> ");
+System.Console.Write($"{basisA} в степени {indexA} - > {DegreeNumbers(basisA, indexA)}");
 
