@@ -16,12 +16,20 @@ ulong Promt(string message)
 int CountDigits(ulong number)
 {
     int count = 0;
-    while (number > 0)
+    if (number != 0)
     {
-        number /= 10;
-        count++;
+        while (number >0)
+        {
+            number /= 10;
+            count++;
+        }
+        return count;
     }
-    return count;
+    else
+    {
+        return 1;
+    }
+
 }
 
 
@@ -29,4 +37,3 @@ int CountDigits(ulong number)
 //Основная программа
 ulong num = Promt("Введите число -> ");
 System.Console.Write($"Количество цифр в числе {num} - > {CountDigits(num)}");
-
