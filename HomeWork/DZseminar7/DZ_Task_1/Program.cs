@@ -15,10 +15,6 @@ int Prompt(string message)
     throw new Exception("Вы ввели не число");
 }
 
-//Random rand = new Random(DateTime.Now.Millisecond);
-
-
-
 //Генерация матрицы случайными вещественными числами в диапазоне [minRange, maxRange]
 double[,] GenerateArray(int rowLength, int colLength, int minRange, int maxRange)
 {
@@ -49,8 +45,6 @@ void PrintArray(double[,] array)
     }
     System.Console.WriteLine();
 }
-
-
 
 
 //основная программа
