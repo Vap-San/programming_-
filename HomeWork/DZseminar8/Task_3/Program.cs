@@ -56,7 +56,6 @@ int MultiplyRowCol(int[,] firstArray, int[,] secondArray, int row, int col)
 int[,] MultiplyMartix(int[,] firstArray, int[,] secondArray)
 {
     int[,] thirdArray = new int[firstArray.GetLength(0), secondArray.GetLength(1)];
-    {
         for (int row = 0; row < firstArray.GetLength(0); row++)
         {
             for (int col = 0; col < secondArray.GetLength(1); col++)
@@ -65,7 +64,6 @@ int[,] MultiplyMartix(int[,] firstArray, int[,] secondArray)
             }
         }
         return thirdArray;
-    }
 }
 
 //основная программа
